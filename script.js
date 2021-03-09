@@ -75,3 +75,65 @@
 //     showMessage('Anne', 'parameter some text ');
 //     showMessage('Anne but no text parameter!');
 //yes, I see what's happening - see note in DOM undder Default values
+
+//Alternative default parameters. Setting defalt parameter later in function execution
+// function showMessage(text) {
+//     if(text=== undefined){
+//         text= "empty message";
+//     }
+//         console.log(text);
+// }
+//         showMessage();
+        //showMessage("Not empty");
+
+//or use || to define parameter when empty
+// if text parameter is omitted or "" is passed, set it to 'empty'
+// function showMessage(text) {
+//     text = text || 'empty';
+//     ...
+//   }
+//or use the nullish coalescing operator ??, it’s better when falsy values, 
+//such as 0, are considered regular:
+// if there's no "count" parameter, show "unknown"
+// function showCount(count) {
+//     alert(count ?? "unknown");
+//   }  
+//   showCount(0); // 0
+//   showCount(null); // unknown
+//   showCount(); // unknown      
+
+//Now for function return - Yeah!!
+//A function can return a value back into the calling code as the result.
+// function sum(a, b) {
+//     return a + b;
+// }
+//     let result= 1 + 2;
+//     console.log(result);
+
+//The directive return can be in any place of the function
+//There may be many occurrences of return
+// function checkAge(age) {
+//     if(age >= 18) {
+//         return true;
+//     }else{
+//         return confirm("Do you have permission from your parents");  //confirm() boolean function
+//     }   //false- access denied, true- accessgranted    
+// }
+    // let age= prompt("How old are you?", 18);    //creates function prompt() text box
+    // if (checkAge(age)) {
+    //     alert("Access granted. Woo hoo!!");     //true
+    // }else{
+    //     alert("Access denied. Oh Noooo!!");
+    // }
+
+//It is possible to use return without a value. That causes the function to exit immediately.
+//if checkAge(age) returns false, then showMovie won’t proceed to the alert.
+// function showMovie(age) {
+//     if ( !checkAge(age)) {
+//         return;
+//     }
+//         console.log("Showing you the movie...");
+// }
+//         showMovie();
+    
+
